@@ -1,0 +1,23 @@
+*{
+ font-size: 25px;
+ font-weight: 500;
+}
+h3{
+color: rgb(19, 102, 102);
+}
+h4{
+    color: rgb(185, 4, 185);
+}
+h5,p{
+    color: rgb(5, 95, 125);
+}
+.class{
+    color: rgb(7, 109, 7);
+}
+h2{
+    color: rgb(116, 3, 20);
+}
+#id{
+    color: rgb(254, 0, 0);
+}
+
