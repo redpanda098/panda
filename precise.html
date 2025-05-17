@@ -1,0 +1,42 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <style>
+            div{
+                right: 30px;
+                border: 3px solid rgb(26, 30, 249);
+            }
+            div.sticky{
+                position: sticky;
+                top: 1px;
+                left: 20px;
+                border: 2px solid rgb(249, 30, 30);
+            }
+            div.absolute{
+                position: absolute;
+                top: 20px;
+                left: 18px;
+            }
+            div.fixed{
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                border: 2px solid rgb(30, 249, 30); 
+                
+            }
+            div.relative{
+                position: relative;
+                top: 0px;
+                left: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>positing</h1>
+        <div>div with no poisition</div>
+        <div class="sticky">div with sticky position</div>
+        <div class="absolute">div with absolute position</div>
+        <div class="fixed">div with fixed position</div>
+        <div class="relative">div with relative position</div>
+    </body>
+</html>
