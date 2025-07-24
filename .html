@@ -1,28 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title> personal Form </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        h1, h3 {
+            color: #333;
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <h3>personal form</h3>
-    <form>
-        <fieldset>
-            <legend>personal information</legend>
-        <label>enter your name</label>
-        <input type="text"><br><br>
-        <label>enter your roll no.</label>
-        <input type="text"><br><br>
-        <label>gender</label><br>
-        <input type="radio" id="male" name="gender" value="male">male<br>
-        <input type="radio" id="female" name="gender" value="female">female<br><br> 
-        <label>enter your contact no.</label>
-        <input type="password"><br><br>
-        <input type="submit" value="submit"><br><br>
-        <label>enter your email</label>
-        <input type="email"><br><br>
-        <label>birthday</label>
-        <input type="date" id="birthay" name="birthday"><br><br>
-    </fieldset>
-    </form>
+    <center>
+        <h1>Calculator</h1>
+        <h1>Give The Expression</h1>
+        <hr>
+        <br><br>
+        Here: <input type="text" id="exp">
+        <button onclick="calculate()">Calculate</button>
+        <br><br>
+        <h3 id="result">Answer will be displayed here</h3>
+    </center>
+
+    <script>
+        function calculate() {
+            const exp = document.getElementById("exp").value;
+            try {
+                const ans = eval(exp);
+                document.getElementById("result").innerHTML = `The answer of (${exp}) is: ${ans}`;
+            } catch (error) {
+                document.getElementById("result").innerHTML = "Invalid expression!";
+            }
+        }
+    </script>
 </body>
 </html>
