@@ -1,23 +1,45 @@
-*{
- font-size: 25px;
- font-weight: 500;
+body{
+    font-family: open-sans, sans-serif;
+    background-color: black;
 }
-h3{
-color: rgb(19, 102, 102);
+#container{
+    width: 100px;
+    height: 550px;
+    margin: 20px;
 }
-h4{
-    color: rgb(185, 4, 185);
+#calculator{
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    margin: 0;
+    top:20px ;
+    position: relative;
+    border-radius: 5px;
 }
-h5,p{
-    color: rgb(5, 95, 125);
+#keyboard{
+    height: 400px;
 }
-.class{
-    color: rgb(7, 109, 7);
+.operator, .number , .empty{
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    float: left;
+    border-radius: 50%;
+    border-width: 0;
+    font-weight: bold;
+    font-size: 20px;
 }
-h2{
-    color: rgb(116, 3, 20);
+.number , .empty{
+    background-color: #666;
+    color: white;
 }
-#id{
-    color: rgb(254, 0, 0);
+.number , .operator{
+    cursor: pointer;
 }
-
+.operator:active, .number:active{
+ font-size: 13px;
+}
+.operator:focus, .number:focus, .empty:focus{
+    outline: none;
+}
+ 
