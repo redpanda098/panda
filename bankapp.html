@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BANK APP</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0
+">        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Bank App</h1>
+            <form id="bankForm">
+                <label for="accountNumber">Enter transaction amount:</label>
+                <input type="text" id="accountNumber" name="accountNumber" required>
+                <button type="button" id="creditButton">credit</button>
+                <button type="button" id="debitButton">debit</button>
+                <div id="result"></div>
+            </form>
+        </div>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-image:url(panoramic-abstract-blue-background-product-600nw-2500946363.webp);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 100vh;}
+            .container {
+                width: 300px;
+                margin: 50px auto;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 5px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;}
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                background-color: rgba(160, 201, 220, 0.593);
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+            h1 {
+                text-align: center;
+                color: #333;
+                font-size: 30px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                text-shadow: 2px 2px 8px #cdcdcd;
+            }
+            label {
+                display: block;
+                margin-bottom: 10px;
+            }
+            input[type="text"] {
+                width: calc(100% - 20px);
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #5b5858;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+            }
+            button {
+                width: 48%;
+                padding: 10px;
+                margin-right: 2%;
+                cursor: pointer;
+            }
+            #result {
+                margin-top: 20px;
+                font-weight: bold;
+                color: #333;
+            }
+        </style>
+        <script src="app.js"></script>
+</html>
