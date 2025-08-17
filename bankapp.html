@@ -72,5 +72,41 @@
                 color: #333;
             }
         </style>
-        <script src="app.js"></script>
+        <variable name="bankApp" data-amount="0"></variable>
+      <script>
+    // Example bankApp object for testing
+    const bankApp = {
+        data: {
+            amount: 1000 // initial balance
+        }
+    };
+
+    document.getElementById('creditButton').addEventListener('click', function() {
+        const amount = parseFloat(document.getElementById('accountNumber').value);
+        if (!isNaN(amount)) {
+            bankApp.data.amount += amount;
+            document.getElementById('result').innerText = `New balance after credit: ${bankApp.data.amount}`;
+        } else {
+            alert('Please enter a valid number');
+        }
+    });
+
+    document.getElementById('debitButton').addEventListener('click', function() {
+        const amount = parseFloat(document.getElementById('accountNumber').value);
+        if (!isNaN(amount)) {
+            bankApp.data.amount -= amount;
+            document.getElementById('result').innerText = `New balance after debit: ${bankApp.data.amount}`;
+        } else {
+            alert('Please enter a valid number');
+        }
+    });
+</script>
+
+        <div id="result"></div>
+    </div>
+        <footer>
+            <p style="text-align: center; color: #333;">&copy; 2025 Bank App</p>
+        </footer>
+    </div>
+    </body>
 </html>
