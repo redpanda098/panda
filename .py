@@ -1,86 +1,50 @@
-str = "Hello"
-#   0 1 2 3 4  index
-# { H, e, l, l, o } value
+#example
+def greet(name):  # copy value is here (parameter)
+    print("hello", name) #using the copy value
+    #defination part
 
-# fetching individual character from string
-# print(name_of_string[index_number])
-print(str[0])  
+greet("Tanishka")  #real value is passed here (argument) #calling part
 
-#slicing
-#print(name_of_string[starting_point : ending_point])
-print(str[0:4])
+#Q)create a function to print the sum of two numbers
 
-#looping of the string
-for i in str:
-    print(i , end= "")
+def sum(a,b):
+    return a+b
 
-print("\nusing upper and lower method")
+ans = sum(3,5)
+print(ans) #ideal method
 
-#using upper method
-print(str.upper())
+# print(sum(3,5))#shortmethod
 
-#using lower method
-print(str.lower())
+#create a function which return muliplication of two number
+def multiply(a,b):
+    return a*b
 
-# numeric types
-num1 = 10   #int
-num2 = 20.5  #float
+ans = multiply(3,4)
+print(ans)
 
-#sequence types
-text = "Hello World"  #string
-fruits = ["apple", "banana", "cherry"]  #list/array
+# cube 
 
-#mapping types JSON :- #dict /obj
-student = {
-    "name": "student" ,
-    "age": 20,
-    "skills" : "html"
-}
+def cube(a):
+    return a*a*a
 
-#boolean type
-a = True
-print("converting the boolen into number:" , int(a))  # using typecasting inorder to change boolean dt in interger
+ans = cube(2)
+print(ans)
 
-#testing operators
-x = 10
-y = 20
+#::::::::::
+def counter(n):
+    if n == 0: # base condition
+        return
+    print("the counter is at :", n)
+    counter(n-1) # changing the parameter
 
-if x != y:
-    print("true")
-else:
-    print("false")
+counter(10)
 
-#integer to  float
-num = 10
-num_float = float(num)
-print("integer to float:", num_float) # output: 10.0
+#factorial number
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
 
-#float to integer
-num2 = 20.5
-num_int = int(num2)
-print("float to integer:", num_int) # output: 20
-
-#string to integer(if string contains numeric )
-str_num = "30"
-str_to_int = int(str_num)
-print("string to integer:", str_to_int) # output: 30
-
-#integer to string
-num3 = 40
-int_to_str = str(num3)
-print("integer to string:", int_to_str) # output: "40"
-
-#arithmetic operators
-a = 15
-b = 4
-print("Addition:", a + b)          # Addition
-print("Subtraction:", a - b)       # Subtraction
-print("Multiplication:", a * b)    # Multiplication
-print("Division:", a / b)          # Division
-print("modulus:", a % b)           # Modulus
-
-#comparison operators
-print("is a equal to b:", a == b)       # Equal to
-print("is a not equal to b:", a != b)   # Not equal to
-print("is a greater than b:", a > b)     # Greater than
-print("is a less than b:", a < b)        # Less than
+# Example
+print(factorial(5))   # Output: 120
